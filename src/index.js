@@ -52,3 +52,4 @@ import '@com/blocks/about-country/script.js';
 import '@com/blocks/reviews/script.js';
 import '@com/blocks/tariff/script.js';
 import '@com/blocks/questions/script.js';
+import '@com/blocks/footer/script.js';

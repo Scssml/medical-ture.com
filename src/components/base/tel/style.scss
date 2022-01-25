@@ -17,4 +17,10 @@
     margin-right: 10px;
     flex-shrink: 0;
   }
+
+  &--light {
+    &:before {
+      background-image: url(@img/phone-light.svg);
+    }
+  }
 }

@@ -2,12 +2,16 @@
   const defaultOptionsTel = {
     text: '',
     tel: '',
+    light: false,
   };
 
 mixin tel(options)
-  - options = Object.assign({}, defaultOptionsTel, options);
+  -
+    options = Object.assign({}, defaultOptionsTel, options);
+    classCss = (options.light) ? 'tel--light' : '';
 
   a.tel(
+    class= classCss
     href=`tel:${options.tel}`
   )&attributes(attributes)
     = options.text

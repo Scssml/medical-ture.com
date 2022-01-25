@@ -2,12 +2,16 @@
   const defaultOptionsMail = {
     text: '',
     mail: '',
+    light: false,
   };
 
 mixin mail(options)
-  - options = Object.assign({}, defaultOptionsMail, options);
+  -
+    options = Object.assign({}, defaultOptionsMail, options);
+    classCss = (options.light) ? 'mail--light' : '';
 
   a.mail(
+    class= classCss
     href=`mailto:${options.mail}`
   )&attributes(attributes)
     = options.text
