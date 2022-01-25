@@ -1,0 +1,27 @@
+-
+  const defaultOptionsTextarea = {
+    label: '',
+    name: '',
+    placeholder: '',
+    required: false,
+    light: false,
+    error: 'Пожалуйста, заполните поле ввода',
+  };
+
+mixin textarea(options)
+  -
+    options = Object.assign({}, defaultOptionsTextarea, options);
+    const classCss = (options.light) ? 'textarea--light' : '';
+
+  label.textarea(class= classCss)&attributes(attributes)
+    if options.label
+      = options.label
+      br
+
+    textarea(
+      name=options.name
+      placeholder=options.placeholder
+      required=options.required  
+    )
+
+    .textarea__error-text= options.error

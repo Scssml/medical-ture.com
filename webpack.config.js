@@ -40,7 +40,7 @@ const optimization = () => {
 const plugins = () => {
   const config = [
     new HtmlWebpackPlugin({
-      title: 'Axus group',
+      title: 'medical-ture.com',
       template: 'index.pug',
       filename: 'index.html',
       minify: {

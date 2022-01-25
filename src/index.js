@@ -12,6 +12,7 @@ import '@js/lazyload.js';
 
 import '@com/base/btn/script.js';
 import '@com/base/input/script.js';
+import '@com/base/textarea/script.js';
 import '@com/base/tel/script.js';
 import '@com/base/mail/script.js';
 import '@com/base/logo/script.js';
@@ -50,3 +51,4 @@ import '@com/blocks/clinics/script.js';
 import '@com/blocks/about-country/script.js';
 import '@com/blocks/reviews/script.js';
 import '@com/blocks/tariff/script.js';
+import '@com/blocks/questions/script.js';

@@ -18,7 +18,7 @@ section.m-5.py-5
         .col-xl-6
           +form({})
             .row
-              .col-xl-6.mb-4
+              .col-xl-6.mb-2
                 +input({
                   label: 'Как к вам обращаться?',
                   name: 'name',
@@ -26,7 +26,7 @@ section.m-5.py-5
                   type: 'text',
                 }).text-medium
 
-              .col-xl-6.mb-4
+              .col-xl-6.mb-2
                 +input({
                   label: 'Ваш телефон',
                   name: 'phone',
@@ -35,7 +35,7 @@ section.m-5.py-5
                   required: true,
                 }).text-medium
 
-              .col-xl-6.mb-4
+              .col-xl-6.mb-2
                 +input({
                   label: 'Ваш e-mail',
                   name: 'mail',
@@ -44,12 +44,12 @@ section.m-5.py-5
                   required: false,
                 }).text-medium
 
-              .col-xl-6.mb-4.align-self-end
+              .col-xl-6.mb-2.align-self-end
                 +btn({
                   name: 'Получить отзывы',
                   size: '',
                   color: '',
-                }).w-100
+                }).w-100.mb-4
 
               .col-xl-12
                 +consent({

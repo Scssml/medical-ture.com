@@ -1,0 +1,49 @@
+section.questions
+  .container
+    .row.justify-content-end
+      .col-xl-7
+        .row
+          h2.mb-5 Задайте свой вопрос
+
+          +form({})
+            .mb-4
+              +textarea({
+                label: 'Напишите ваш вопрос',
+                name: 'question',
+                placeholder: 'Например: Какую клинику лучше выбрать для реабилитации после инсульта?',
+                required: true,
+              }).text-medium
+
+            .text-medium.mb-3 Куда прислать ответ?
+
+            +block({})
+              .row 
+                .col-xl-6.mb-2
+                  +input({
+                    label: 'Введите телефон',
+                    name: 'phone',
+                    placeholder: '+7 (___) ___-__-__',
+                    type: 'tel',
+                    required: true,
+                  }).text-medium
+
+                .col-xl-6.mb-2.align-self-end
+                  +btn({
+                    name: 'Задать вопрос',
+                    size: '',
+                    color: '',
+                  }).w-100.mb-4
+
+                .col-12
+                  +consent({
+                    text: `
+                      Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь
+                      с <a href="#">Политикой конфиденциальности</a>
+                      `
+                  })
+    
+  .questions__img
+    img(
+      src= require('@img/image-19.jpg'),
+      alt="questions"
+    )
