@@ -1,0 +1,19 @@
+-
+  const defaultOptionsIcon = {
+    img: '',
+    size: '',
+    color: '',
+  };
+
+mixin icon(options)
+  -
+    options = Object.assign({}, defaultOptionsIcon, options);
+    let classCss = '';
+    classCss += (options.size) ? ` icon--size-${options.size}` : '';
+    classCss += (options.color) ? ` icon--color-${options.color}` : '';
+
+  .icon(class= classCss)&attributes(attributes)
+    img(
+      src= options.img,
+      alt="icon"
+    )

@@ -1,0 +1,66 @@
+section.m-5.py-5
+  .container
+    h2.text-center.mb-4
+      | Хотите узнать мнение пациентов из России, 
+      br 
+      | которые лечились в Израиле?
+
+    .text-madium.text-center.mb-5
+      | Мы гарантируем сохранение медицинской тайны. Но некоторые пациенты поделились своими впечатлениями о лечении на страницах клиник.
+      br
+      strong Оставьте заявку, и мы вышлем отзывы по вашему запросу
+
+    +block({
+      color: 'blue',
+      size: 'big',
+    })
+      .row.align-items-center
+        .col-xl-6
+          +form({})
+            .row
+              .col-xl-6.mb-4
+                +input({
+                  label: 'Как к вам обращаться?',
+                  name: 'name',
+                  placeholder: 'Ваше имя',
+                  type: 'text',
+                }).text-medium
+
+              .col-xl-6.mb-4
+                +input({
+                  label: 'Ваш телефон',
+                  name: 'phone',
+                  placeholder: '+7 (___) ___-__-__',
+                  type: 'tel',
+                  required: true,
+                }).text-medium
+
+              .col-xl-6.mb-4
+                +input({
+                  label: 'Ваш e-mail',
+                  name: 'mail',
+                  placeholder: 'E-mail',
+                  type: 'mail',
+                  required: false,
+                }).text-medium
+
+              .col-xl-6.mb-4.align-self-end
+                +btn({
+                  name: 'Получить отзывы',
+                  size: '',
+                  color: '',
+                }).w-100
+
+              .col-xl-12
+                +consent({
+                  text: `
+                    Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь
+                    с <a href="#">Политикой конфиденциальности</a>
+                    `
+                })
+
+        .col-xl-6.text-right
+          img(
+            src= require('@img/image-18.webp'),
+            alt="image"
+          ).my-n1

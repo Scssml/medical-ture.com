@@ -1,0 +1,20 @@
+-
+  const defaultOptionsCard = {
+    img: '',
+    name: '',
+  };
+
+mixin card(options)
+  - options = Object.assign({}, defaultOptionsCard, options);
+
+  .card&attributes(attributes)
+    .card__img
+      img(
+        src= options.img,
+        alt="card"
+      )
+
+    .card__content
+      .card__name.h6.mb-4= options.name
+
+      block

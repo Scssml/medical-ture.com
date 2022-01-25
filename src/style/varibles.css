@@ -1,0 +1,25 @@
+:root {
+  --colorBgPrimary: #4064DF;
+  --colorBgPrimaryLight: #E9EEFD;
+  --colorBgPrimaryDark: #0F3290;
+
+  --colorBgSecondary: #FFAC27;
+  --colorBgSecondaryDark: #ED9200;
+  --colorBgSecondaryDeepDark: #D78400;
+
+  --colorBgGray: #F8F9FD;
+  --colorBgGrayLight: #FFF;
+  --colorBgGrayDark: #C6D5E2;
+
+  --colorTextPrimary: #0F3290;
+  --colorTextPrimaryLight: #4F6CBB;
+
+  --colorTextSecondary: #FFF;
+
+  --colorTextTertiary: #FFAC27;
+
+  --colorRed: #F93232;
+  --colorGreen: #26D367;
+
+  --boxShadow: 0px 4px 10px rgba(118, 129, 137, 0.14);
+}

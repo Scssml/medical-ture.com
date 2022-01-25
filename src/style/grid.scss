@@ -1,0 +1,39 @@
+.row {
+  --bs-gutter-x: 2rem;
+}
+
+.container {
+  --bs-gutter-x: 1rem;
+
+  @media (min-width: 1470px) {
+    max-width: 1390px;
+  }
+}
+
+
+.w-100 {
+  width: 100%;
+}
+
+.overflow-auto {
+
+  @media (max-width: 991px){
+    overflow: auto;
+  }
+}
+
+.bg-gray {
+  background-color: var(--colorBgGray);
+}
+
+.bg-blue-light {
+  background-color: var(--colorBgPrimaryLight);
+}
+
+.color-orange {
+  color: var(--colorTextTertiary);
+}
+
+img {
+  max-width: 100%;
+}

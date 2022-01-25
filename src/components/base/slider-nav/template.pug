@@ -1,0 +1,13 @@
+-
+  const defaultOptionsSliderNav = {
+    sliderId: '',
+  };
+
+mixin sliderNav(options)
+  - options = Object.assign({}, defaultOptionsSliderNav, options);
+
+  if options.sliderId
+    .slider-nav(data-slider-id=options.sliderId)&attributes(attributes)
+      button.slider-nav__btn.slider-nav__btn--prev
+
+      button.slider-nav__btn.slider-nav__btn--next

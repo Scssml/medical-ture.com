@@ -1,0 +1,23 @@
+.block {
+  padding: 34px;
+  border-radius: 9px;
+  background-color: var(--colorBgGrayLight);
+  box-shadow: var(--boxShadow);
+  color: var(--colorTextPrimary);
+  width: 100%;
+
+  &--color-blue {
+    background-color: var(--colorBgPrimary);
+    color: var(--colorTextSecondary);
+  }
+
+  &--size-small {
+    padding: 22px;
+    border-radius: 5px;
+  }
+
+  &--size-big {
+    padding: 44px;
+    border-radius: 5px;
+  }
+}

@@ -1,0 +1,17 @@
+.list {
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    margin-bottom: 15px;
+
+    &:before {
+      content: '';
+      width: 4px;
+      background-color: var(--colorBgSecondary);
+      flex-shrink: 0;
+      margin-right: 15px;
+    }
+  }
+}

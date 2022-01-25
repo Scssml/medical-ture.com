@@ -1,0 +1,36 @@
+.slider-nav {
+  display: inline-flex;
+  width: 110px;
+  justify-content: space-between;
+
+  &__btn {
+    width: 45px;
+    height: 45px;
+    border: 2px solid var(--colorBgPrimary);
+    border-radius: 50%;
+    background-image: url(@img/slider-nav.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 55% 50%;
+    text-indent: -999px;
+    overflow: hidden;
+    transition: background-color .25s ease-in-out,
+                border-color .25s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: var(--colorBgPrimary);
+      background-image: url(@img/slider-nav-white.svg);
+    }
+
+    &:active {
+      background-color: var(--colorBgPrimaryDark);
+      background-image: url(@img/slider-nav-white.svg);
+      border-color: 2px solid var(--colorBgPrimaryDark);
+    }
+
+    &--prev {
+      transform: rotate(180deg);
+    }
+  }
+}

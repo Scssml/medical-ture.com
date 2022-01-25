@@ -1,0 +1,8 @@
+-
+  const defaultOptionsTable = {};
+
+mixin table(options)
+  - options = Object.assign({}, defaultOptionsTable, options);
+
+  .table&attributes(attributes)
+    block

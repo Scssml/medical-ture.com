@@ -1,0 +1,35 @@
+section.utp
+  .container
+    .row
+      .col-xl-7
+        .row
+          .col-xxl-11
+            h1.mb-4 Возьмем на себя всю организацию лечения в Израиле
+
+            h3.mb-4 Поправляйте свое здоровье, а мы позаботимся об остальном
+
+            .text-medium.mb-5.pb-5 Подберем клинику, организуем вылет, встретим и разместим, предоставим русскоговорящего куратора
+
+            +block({
+              size: 'small',
+            }).mt-5
+              .row.align-items-center
+                .col-xl-7.col-xxl-6
+                  | Расскажите о своей проблеме 
+                  strong В течение 15 минут
+                  | подберем сильные клиники для лечения вашего заболевания
+
+                .col-xl-5.col-xxl-6
+                  +btn({
+                    name: 'Получить список клиник',
+                    size: '',
+                    color: '',
+                    href: '#',
+                    icon: require('@img/arrow-right.svg'),
+                  }).w-100
+    
+  .utp__img
+    img(
+      src= require('@img/image-5.jpg'),
+      alt="utp"
+    )

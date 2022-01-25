@@ -1,0 +1,111 @@
+.card-step {
+  padding: 18px 20px;
+  background-color: var(--colorBgGrayLight);
+  box-shadow: var(--boxShadow);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  min-width: 290px;
+  // max-width: 320px;
+  min-height: 240px;
+
+  &__header {
+    display: flex;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__name {
+    width: 100%;
+    align-self: center;
+  }
+
+  &__img {
+    width: 64px;
+    height: 64px;
+    margin-left: 15px;
+    position: relative;
+    flex-shrink: 0;
+
+    img {
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      min-height: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -25px;
+      left: -50px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: var(--colorBgSecondary);
+      transform: translate(100%, -100%);
+      transition: transform .35s linear;
+    }
+  }
+
+  &__text {
+    margin-top: 10px;
+    padding-right: 40px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      // background-image: linear-gradient(rgba(255,255,255,0), rgb(255,255,255));
+      background: #fff;
+      box-shadow: 0 0 30px 20px #fff;
+      transition: transform .35s linear;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: -25px;
+    width: 522px;
+    height: 522px;
+    border-radius: 50%;
+    background-color: var(--colorBgPrimaryLight);
+    z-index: 2;
+    opacity: .7;
+    transition: transform .5s linear;
+  }
+
+  &:hover {
+
+    &:after {
+      transform: translate(100%, -100%);
+    }
+
+    .card-step{
+      
+      &__img {
+
+        &:after {
+          transform: translate(0, 0);
+        }
+      }
+
+      &__text {
+
+        &:after {
+          transform: translateY(100%);
+        }
+      }
+    }
+  }
+}

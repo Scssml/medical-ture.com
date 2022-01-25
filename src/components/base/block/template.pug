@@ -1,0 +1,15 @@
+-
+  const defaultOptionsBlock = {
+    color: '',
+    size: '',
+  };
+
+mixin block(options)
+  -
+    options = Object.assign({}, defaultOptionsBlock, options);
+    let classCss = '';
+    classCss += (options.color) ? ` block--color-${options.color}` : '';
+    classCss += (options.size) ? ` block--size-${options.size}` : '';
+
+  .block(class= classCss)&attributes(attributes)
+    block

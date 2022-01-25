@@ -1,0 +1,18 @@
+-
+  const defaultOptionsTabs = {
+    tabsId: '',
+    items: [],
+  };
+
+mixin tabs(options)
+  - options = Object.assign({}, defaultOptionsTabs, options);
+
+  .row.tabs&attributes(attributes)
+    each val, i in options.items
+      .col-xl-4
+        +btn({
+          name: val,
+          size: '',
+          color: (i) ? 'transparent' : '',
+          href: `#tabs-block-${options.tabsId}-${i}`,
+        }).w-100(data-tabs-id= `${options.tabsId}`)

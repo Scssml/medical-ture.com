@@ -1,0 +1,115 @@
+-
+  const itemsCompare = {
+    header: [
+      '',
+      '«Под ключ» с Medical ture',
+      'Самостоятельно',
+    ],
+    body: [
+      {
+        img: '',
+        text: '<div class="h6"><strong>Ожидание диагноза от врачей</strong></div>',
+      },
+      {
+        img: require('@img/success-bg.svg'),
+        text: 'В течение 3-х рабочих дней',
+      },
+      {
+        img: require('@img/error-bg.svg'),
+        text: 'От нескольких недель до месяцев',
+      },
+      {
+        img: '',
+        text: '<div class="h6"><strong>Подготовка документов</strong></div>',
+      },
+      {
+        img: require('@img/success-bg.svg'),
+        text: 'В течение 1 рабочего дня',
+      },
+      {
+        img: require('@img/error-bg.svg'),
+        text: 'Минимум 1,5 недели',
+      },
+      {
+        img: '',
+        text: '<div class="h6"><strong>В экстренных случаях</strong></div>',
+      },
+      {
+        img: require('@img/success-bg.svg'),
+        text: 'Бесплатно сделаем все возможное, чтобы организовать лечение за 12 часов',
+      },
+      {
+        img: require('@img/error-bg.svg'),
+        text: 'Не сможете ускорить процесс подготовки документов и организации лечения',
+      },
+      {
+        img: '',
+        text: '<div class="h6"><strong>Перечение границы</strong></div>',
+      },
+      {
+        img: require('@img/success-bg.svg'),
+        text: 'Гарантируем въезд в Израиль без проблем. Или вернем деньги',
+      },
+      {
+        img: require('@img/error-bg.svg'),
+        text: 'Проблемы с въездом из-за коронавируса',
+      },
+      {
+        img: '',
+        text: '<div class="h6"><strong>Языковой барьер</strong></div>',
+      },
+      {
+        img: require('@img/success-bg.svg'),
+        text: 'Русскоговорящий куратор сопровождает на всех этапах лечения',
+      },
+      {
+        img: require('@img/error-bg.svg'),
+        text: 'Не понимаете врачей, и что написано в медицинских документах',
+      },
+      {
+        img: '',
+        text: '<div class="h6"><strong>Очереди к врачу в Израиле</strong></div>',
+      },
+      {
+        img: require('@img/success-bg.svg'),
+        text: 'Вам не нужно сидеть в общей очереди',
+      },
+      {
+        img: require('@img/error-bg.svg'),
+        text: 'Ждете в общей очереди. Период лечения и расходы увеличиваются',
+      },
+      {
+        img: '',
+        text: '<div class="h6"><strong>Другое</strong></div>',
+      },
+      {
+        img: require('@img/success-bg.svg'),
+        text: 'Организуем трансфер, найдем жилье',
+      },
+      {
+        img: require('@img/error-bg.svg'),
+        text: 'Не знаете, куда идти, как вызвать такси',
+      },
+    ]
+  };
+
+section.my-5.py-5
+  .container 
+    h2.text-center.mb-5
+      | Не теряйте драгоценное время: 
+      br 
+      | начните лечение в Израиле уже через 3-4 дня
+
+    +table({})
+      each val in itemsCompare.header 
+        .table__cell.table__cell--header
+          if val
+            .h4= val
+
+      each val in itemsCompare.body
+        .table__cell.text-medium
+          if val.img
+            +iconText(val)
+
+          else
+            != val.text

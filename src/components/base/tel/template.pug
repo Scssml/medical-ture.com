@@ -1,0 +1,13 @@
+-
+  const defaultOptionsTel = {
+    text: '',
+    tel: '',
+  };
+
+mixin tel(options)
+  - options = Object.assign({}, defaultOptionsTel, options);
+
+  a.tel(
+    href=`tel:${options.tel}`
+  )&attributes(attributes)
+    = options.text

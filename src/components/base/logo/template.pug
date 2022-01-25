@@ -1,0 +1,24 @@
+-
+  const defaultOptionsLogo = {
+    img: '',
+    text: '',
+    light: false,
+    href: '',
+  };
+
+mixin logo(options)
+  -
+    options = Object.assign({}, defaultOptionsLogo, options);
+    const classCss = (options.light) ? 'logo--light' : '';
+
+  a.logo(
+    class= classCss,
+    href= options.href
+  )&attributes(attributes)
+    .logo__img
+      img(
+        src= options.img,
+        alt="logo"
+      )
+
+    != options.text

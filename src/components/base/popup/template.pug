@@ -1,0 +1,20 @@
+-
+  const defaultOptionsPopup = {
+    title: '',
+    titleAlign: 'left',
+    id: '',
+    size: 'big',
+  };
+
+mixin popup(options)
+  - options = Object.assign({}, defaultOptionsPopup, options);
+
+  .d-none
+    .popup(
+      id= options.id,
+      class= (options.size === 'small') ? 'popup--small' : ''
+    )
+      if options.title
+        h3.popup__title(class= (options.titleAlign === 'center') ? 'popup__title--center' : '')= options.title
+
+      block

@@ -1,0 +1,11 @@
+-
+  const defaultOptionsSlider3 = {
+    sliderId: '',
+  };
+
+mixin slider3(options)
+  - options = Object.assign({}, defaultOptionsSlider3, options);
+
+  if block && options.sliderId
+    .owl-carousel.slider-3(id=options.sliderId)&attributes(attributes)
+      block

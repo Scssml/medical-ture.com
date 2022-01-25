@@ -1,0 +1,38 @@
+-
+  const defaultOptionsBtn = {
+    name: '',
+    size: '',
+    color: '',
+    href: '',
+    icon: '',
+  };
+
+mixin btn(options)
+  -
+    options = Object.assign({}, defaultOptionsBtn, options);
+    let classCss = '';
+    classCss += (options.size) ? ` btn--size-${options.size}` : '';
+    classCss += (options.color) ? ` btn--color-${options.color}` : '';
+
+
+  if options.href.length > 0
+    a.btn(
+      href= options.href,
+      class= classCss
+    )&attributes(attributes)
+      = options.name
+
+      if options.icon
+        span.btn__icon
+          img(src= options.icon alt="icon")
+
+  else
+    button.btn(
+      class= classCss
+      type="submit"
+    )&attributes(attributes)
+      = options.name
+
+      if options.icon
+        span.btn__icon
+          img(src= options.icon alt="icon")

@@ -1,0 +1,22 @@
+include mixins
+
+-
+  const title = htmlWebpackPlugin.options.title;
+  const emptyImg = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+
+html(lang="ru")
+  block head
+    head
+      meta(charset="utf-8")
+      title!= title
+      meta(content="width=device-width, initial-scale=1" name="viewport")
+      link(rel="icon" href="/favicon.ico")
+  body
+    block header
+
+    block content
+
+    block footer
+
+    block popup
+    

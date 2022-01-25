@@ -1,0 +1,50 @@
+header.header
+  .container
+    .row.align-items-center.justify-content-between
+      .col-xl-auto
+        .row.align-items-center
+          .col-xl-auto
+            +logo({
+              img: require('@img/logo.svg'),
+              text: 'Medical<br>ture',
+              light: false,
+              href: '/',
+            })
+
+          .col-xl-auto
+            | Организация лечения
+            br
+            | в Израиле «под ключ»
+
+      .col-xl-auto
+        .row.align-items-center
+          .col-xl-auto.text-right.px-0
+            | Задавайте вопросы
+            br
+            | прямо сейчас
+
+          .col-xl-auto
+            +icon({
+              img: require('@img/whatsapp.svg'),
+              size: 'small',
+              color: 'green',
+            })
+
+          .col-xl-auto
+            +tel({
+              text: '+972 77-552-7732',
+              tel: '+972775527732'
+            })
+            br
+            +mail({
+              text: 'natali.bash@medical-ture.com',
+              mail: 'natali.bash@medical-ture.com'
+            })
+
+          .col-xl-auto
+            +btn({
+              name: 'Перезвоните мне',
+              size: 'small',
+              color: 'transparent',
+              href: '#',
+            })

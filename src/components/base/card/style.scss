@@ -1,0 +1,25 @@
+.card {
+  overflow: hidden;
+  background-color: var(--colorBgGrayLight);
+  border-radius: 9px;
+  box-shadow: var(--boxShadow);
+
+  &__img {
+    height: 255px;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      min-height: 100%;
+    }
+  }
+
+  &__content {
+    padding: 25px;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+}

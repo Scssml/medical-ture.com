@@ -1,0 +1,29 @@
+-
+  const defaultOptionsInput = {
+    label: '',
+    name: '',
+    placeholder: '',
+    type: 'text',
+    required: false,
+    light: false,
+    error: 'Пожалуйста, заполните поле ввода',
+  };
+
+mixin input(options)
+  -
+    options = Object.assign({}, defaultOptionsInput, options);
+    const classCss = (options.light) ? 'input--light' : '';
+
+  label.input(class= classCss)&attributes(attributes)
+    if options.label
+      = options.label
+      br
+
+    input(
+      type=options.type
+      name=options.name
+      placeholder=options.placeholder
+      required=options.required  
+    )
+
+    .input__error-text= options.error

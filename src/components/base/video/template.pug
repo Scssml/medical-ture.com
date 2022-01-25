@@ -1,0 +1,14 @@
+-
+  const defaultOptionsVideo = {
+    href: '',
+    img: '',
+  };
+
+mixin video(options)
+  - options = Object.assign({}, defaultOptionsVideo, options);
+
+  a.video(href= options.href)&attributes(attributes)
+    img(
+      src= options.img,
+      alt= "video"
+    )

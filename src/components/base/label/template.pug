@@ -1,0 +1,12 @@
+-
+  const defaultOptionsLabel = {
+    text: '',
+    color: '',
+  };
+
+mixin label(options)
+  -
+    options = Object.assign({}, defaultOptionsLabel, options);
+    const classCss = (options.color) ? `label--color-${options.color}` : '';
+
+  .label(class= classCss)&attributes(attributes)!= options.text

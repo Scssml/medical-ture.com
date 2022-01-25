@@ -1,0 +1,41 @@
+section.my-5.py-5
+  .container
+    +block({
+      size: 'big',
+    })
+      h2.text-center.mb-4
+        | Расскажите о своей проблеме,
+        br
+        | и в течение 3 дней получите план лечения
+
+      .text-medium.text-center.mb-5
+        | В экстренных случаях 
+        strong бесплатно 
+        | сделаем все возможное, чтобы сократить организацию лечения до 12 часов
+
+      .row 
+        .col-xl-5
+          .row
+            .col-xl-5
+              +imageBlock({
+                img: require('@img/staff-1.jpg'),
+              })
+
+            .col-xl-7
+              img(
+                src= require('@img/quote.svg'),
+                alt="quote"
+              ).mb-4
+
+              p.mb-2 Предложим 2-3 клиники с хорошими результатами лечения вашего заболевания
+
+              p.mb-5 Всегда говорим правду о шансах на успех — не «выкачиваем деньги»
+
+              p.text-medium.mb-0 
+                strong
+                  | Менеджер Medical ture,
+                  br
+                  | Натали Литвак
+
+        .col-xl-7
+          include /blocks/feedback-form/template

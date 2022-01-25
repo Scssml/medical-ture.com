@@ -1,0 +1,20 @@
+.my-5.pt-4
+  +block({})
+    .row 
+      .col-xl-5.d-flex
+        .feedback-2__img
+          h2.mb-4 Организуем лечение за 3-4 рабочих дня
+
+          .row
+            .col-xl-6
+              .text-medium.mb-5
+                | Оставьте заявку, наш менеджер свяжется с вами в течение 
+                strong 15 минут
+
+          img(
+            src= require('@img/image-6.webp'),
+            alt="image"
+          )
+
+      .col-xl-7
+        include /blocks/feedback-form/template

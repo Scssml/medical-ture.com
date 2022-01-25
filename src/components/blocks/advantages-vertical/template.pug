@@ -1,0 +1,30 @@
+-
+  const itemsAdvantagesVertical = [
+    {
+      img: require('@img/icon-4.svg'),
+      title: 'Более 2000 клиентов',
+      text: 'прошли лечение в клиниках Израиля с нашей помощью',
+    },
+    {
+      img: require('@img/icon-5.svg'),
+      title: '24/7',
+      text: 'на связи с клиентом, всегда ответим на вопросы и решим проблемы',
+    },
+    {
+      img: require('@img/icon-6.svg'),
+      title: 'Более 8 лет',
+      text: 'организуем «под ключ» лечение в клиниках Израиля',
+    },
+  ]
+
+each val in itemsAdvantagesVertical 
+  .row.advantages-vertical__item
+    .col-xl-3
+      +icon({
+        img: val.img,
+      })
+
+    .col-xl-9
+      .h4.mb-2= val.title
+      
+      = val.text

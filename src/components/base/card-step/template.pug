@@ -1,0 +1,21 @@
+-
+  const defaultOptionsCardStep = {
+    img: '',
+    name: '',
+    text: '',
+  };
+
+mixin cardStep(options)
+  - options = Object.assign({}, defaultOptionsCardStep, options);
+
+  .card-step
+    .card-step__header
+      .card-step__name.h4!= options.name
+
+      .card-step__img
+        img(
+          src= options.img,
+          alt="icon"
+        )
+
+    .card-step__text!= options.text

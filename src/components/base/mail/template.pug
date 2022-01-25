@@ -1,0 +1,13 @@
+-
+  const defaultOptionsMail = {
+    text: '',
+    mail: '',
+  };
+
+mixin mail(options)
+  - options = Object.assign({}, defaultOptionsMail, options);
+
+  a.mail(
+    href=`mailto:${options.mail}`
+  )&attributes(attributes)
+    = options.text

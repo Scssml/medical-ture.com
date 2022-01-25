@@ -1,0 +1,80 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.14rem;
+  line-height: 1.29;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 22px;
+  height: 66px;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--colorBgSecondary);
+  color: var(--colorTextSecondary);
+  transition: color .25s ease-in-out,
+              background-color .25s ease-in-out,
+              border-color .25s ease-in-out;
+
+  &__icon {
+    width: 22px;
+    height: 22px;
+    margin-left: 15px;
+    flex-shrink: 0;
+
+    img {
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--colorBgSecondaryDark);
+    color: var(--colorTextSecondary);
+  }
+
+  &:active {
+    background-color: var(--colorBgSecondaryDeepDark);
+    color: var(--colorTextSecondary);
+  }
+
+  &--color {
+
+    &-transparent {
+      background-color: transparent;
+      border: 2px solid var(--colorBgSecondary);
+      color: var(--colorTextTertiary);
+
+      &:hover,
+      &:focus {
+        border-color: var(--colorBgSecondary);
+        background-color: var(--colorBgSecondary);
+        color: var(--colorTextSecondary);
+      }
+
+      &:active {
+        border-color: var(--colorBgSecondaryDark);
+        background-color: var(--colorBgSecondaryDark);
+        color: var(--colorTextSecondary);
+      }
+    }
+  }
+
+  &--size {
+
+    &-small {
+      height: 50px;
+      font-size: 1rem;
+      line-height: 1.27;
+      padding: 7px 15px;
+
+      .btn__icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

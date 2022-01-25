@@ -1,0 +1,31 @@
+.icon {
+  width: 85px;
+  height: 85px;
+  padding: 14px;
+  background-color: var(--colorBgPrimary);
+  border-radius: 5px;
+
+  img {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &--size {
+
+    &-small {
+      width: 36px;
+      height: 36px;
+      padding: 7px;
+      border-radius: 10px;
+    }
+  }
+
+  &--color {
+
+    &-green {
+      background-color: var(--colorGreen);
+    }
+  }
+}

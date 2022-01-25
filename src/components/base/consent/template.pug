@@ -1,0 +1,9 @@
+-
+  const defaultOptionsConsent = {
+    text: '',
+  };
+
+mixin consent(options)
+  - options = Object.assign({}, defaultOptionsConsent, options);
+
+  .consent&attributes(attributes)!= options.text

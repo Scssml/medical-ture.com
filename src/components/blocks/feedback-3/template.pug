@@ -1,0 +1,20 @@
+.my-5.pt-4
+  +block({})
+    .row 
+      .col-xl-5.d-flex
+        .feedback-3__img
+          h2.mb-4 Не нашли нужного направления или клиники?
+
+          .row
+            .col-xl-6
+              .text-medium
+                | Оставьте заявку, наш менеджер свяжется с вами в течение 
+                strong 15 минут
+
+          img(
+            src= require('@img/image-14.webp'),
+            alt="image"
+          )
+
+      .col-xl-7
+        include /blocks/feedback-form/template

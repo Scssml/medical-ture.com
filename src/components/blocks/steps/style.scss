@@ -1,0 +1,146 @@
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "item-1 item-2 item-3 item-4"
+                       "item-8 item-7 item-6 item-5";
+  grid-gap: 30px;
+
+  & > div {
+    position: relative;
+
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      background-color: var(--colorBgPrimary);
+    }
+
+    &:after {
+      width: 30px;
+      height: 4px;
+      top: calc(50% - 2px);
+      right: -30px;
+    }
+
+    &:before {
+      width: 4px;
+      height: 30px;
+      top: -30;
+      right: calc(50% - 2px);
+      display: none;
+    }
+
+    &:nth-child(1) {
+      grid-area: item-1;
+    }
+
+    &:nth-child(2) {
+      grid-area: item-2;
+    }
+
+    &:nth-child(3) {
+      grid-area: item-3;
+
+      &:after {
+
+        @media (max-width: 1399px) {
+          display: none;
+        }
+
+        @media (max-width: 991px) {
+          display: block;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      grid-area: item-4;
+
+      &:after {
+        display: none;
+
+        @media (max-width: 991px) {
+          display: block;
+        }
+      }
+
+      &:before {
+
+        @media (max-width: 1399px) {
+          display: block;
+        }
+
+        @media (max-width: 991px) {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      grid-area: item-5;
+
+      &:after {
+        display: none;
+
+        @media (max-width: 1399px) {
+          display: block;
+        }
+      }
+
+      &:before {
+        display: block;
+
+        @media (max-width: 1399px) {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-child(6) {
+      grid-area: item-6;
+    }
+
+    &:nth-child(7) {
+      grid-area: item-7;
+
+      &:before {
+
+        @media (max-width: 1399px) {
+          display: block;
+        }
+
+        @media (max-width: 991px) {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-child(8) {
+      grid-area: item-8;
+
+      &:after {
+
+        @media (max-width: 1399px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1399px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "item-1 item-2 item-3"
+                         "item-6 item-5 item-4"
+                         "item-7 item-8 .";
+  }
+
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas: "item-1 item-2 item-3 item-4 item-5 item-6 item-7 item-8";
+
+    &:after {
+      content: '';
+      min-width: 290px;
+    }
+  }
+}

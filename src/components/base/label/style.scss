@@ -1,0 +1,17 @@
+.label {
+  font-size: 1rem;
+  line-height: 1.27;
+  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--colorBgGrayDark);
+  background-color: var(--colorBgGrayLight);
+  color: var(--colorBgPrimary);
+  border-radius: 5px;
+
+  &--color-blue {
+    border-color: var(--colorBgPrimary);
+    background-color: var(--colorBgPrimary);
+    color: var(--colorTextSecondary)
+  }
+}

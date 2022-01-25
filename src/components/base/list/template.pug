@@ -1,0 +1,12 @@
+-
+  const defaultOptionsList = {
+    items: [],
+  };
+
+mixin list(options)
+  - options = Object.assign({}, defaultOptionsList, options);
+
+  ul.list&attributes(attributes)
+    each val in options.items 
+      li
+        span!= val

@@ -1,0 +1,12 @@
+.feedback-2 {
+  
+  &__img {
+    position: relative;
+
+    img {
+      position: absolute;
+      bottom: -34px;
+      right: 0;
+    }
+  }
+}

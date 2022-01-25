@@ -1,0 +1,23 @@
+section.my-5.py-5 
+  .container 
+    h2.text-center.mb-5 Компания Medical ture: подберем лечение с оптимальной стоимостью и максимальными шансами на положительный результат
+
+    .row 
+      .col-xl-5.text-center
+        +video({
+          href: '#',
+          img: require('@img/image-7.jpg')
+        }).mb-4
+
+        .text-medium Узнайте о миссии Medical ture из уст руководителя
+
+      .col-xl-3.text-center
+        img(
+          src= require('@img/image-8.jpg')
+          alt="image"
+        ).mb-4
+
+        .text-medium Лицензия
+
+      .col-xl-4
+        include /blocks/advantages-vertical/template

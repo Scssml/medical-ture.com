@@ -1,0 +1,8 @@
+-
+  const defaultOptionsForm = {};
+
+mixin form(options)
+  - options = Object.assign({}, defaultOptionsForm, options);
+
+  form.form
+    block

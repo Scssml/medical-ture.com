@@ -1,0 +1,40 @@
+-
+  const itemsAdvantages = [
+    {
+      img: require('@img/icon-1.svg'),
+      title: 'Более 8 лет',
+      subtitle: 'на рынке международного медицинского туризма',
+      text: 'Тесные связи с главными врачами ведущих больниц Израиля',
+    },
+    {
+      img: require('@img/icon-2.svg'),
+      title: 'Заочная диагностика с 99,9% точностью',
+      subtitle: 'у нескольких врачей',
+      text: 'План и стоимость лечения известны еще до вылета в Израиль',
+    },
+    {
+      img: require('@img/icon-3.svg'),
+      title: '3-4 рабочих дня',
+      subtitle: 'от вашей заявки до вылета в Израиль',
+      text: 'В экстренных случаях бесплатно сделаем все возможное, чтобы сократить подготовку до 12 часов',
+    },
+  ]
+
+section.my-5.py-5
+  .container
+    .row
+      each val in itemsAdvantages 
+        .col-xl-4
+          .row
+            .col-xl-3
+              +icon({
+                img: val.img,
+              })
+
+            .col-xl-9
+              .h4.mb-2= val.title
+
+              .text-medium.mb-3
+                strong= val.subtitle
+              
+              = val.text

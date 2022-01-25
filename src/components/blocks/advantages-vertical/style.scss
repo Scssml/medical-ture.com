@@ -1,0 +1,14 @@
+.advantages-vertical {
+  
+  &__item {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--colorBgGrayDark);
+
+    &:last-child {
+      border: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}

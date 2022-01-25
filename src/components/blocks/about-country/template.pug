@@ -1,0 +1,187 @@
+-
+  const itemsAboutCountry = [
+    {
+      name: 'Около 75 000',
+      text: 'сложных хирургических операций проводят врачи одной клиники каждый год',
+    },
+    {
+      name: 'Около 83%',
+      text: 'пациентов с раком сохраняют женское здоровье',
+    },
+    {
+      name: 'Около 80%',
+      text: 'пациентов с раком простаты выздоравливают полностью',
+    },
+  ];
+
+section.m-5.py-5
+  .container
+    h2.text-center.mb-5
+      | Израиль — золотая середина между дорогим 
+      br 
+      | лечением в Европе и недостаточно качественным в малоразвитых странах
+
+    .row.mb-5
+      each val in itemsAboutCountry
+        .col-xl-4
+          .h4.mb-2= val.name
+
+          != val.text
+
+    +slider2({
+      sliderId: 2,
+    })
+      +block({
+        color: 'blue',
+        size: 'big',
+      })
+        .h3.text-center.mb-4
+          | Врачи Израиля несут личную полную ответственность за здоровье пациента
+          br
+          | Клиники под строгим контролем государства
+
+        .h6.text-center.mb-5
+          | В Израиле представлены 
+          strong сильные специалисты по всем направлениям
+
+        .row 
+          .col-xl-7
+            .row 
+              .col-xl-6
+                +iconText({
+                  img: require('@img/check.svg'),
+                  text: 'Онкология',
+                }).text-medium.mb-4
+
+                +iconText({
+                  img: require('@img/check.svg'),
+                  text: 'Сердечно-сосудистая система',
+                }).text-medium.mb-4
+
+                +iconText({
+                  img: require('@img/check.svg'),
+                  text: 'Пересадка почек и печени, диализ',
+                }).text-medium.mb-4
+
+                +iconText({
+                  img: require('@img/check.svg'),
+                  text: 'Нейрохирургия',
+                }).text-medium.mb-4
+
+                +iconText({
+                  img: require('@img/check.svg'),
+                  text: 'Реабилитация',
+                }).text-medium.mb-4
+
+              .col-xl-6
+                +iconText({
+                  img: require('@img/check.svg'),
+                  text: 'Гематология',
+                }).text-medium.mb-4
+
+                +iconText({
+                  img: require('@img/check.svg'),
+                  text: 'Пластическая хирургия',
+                }).text-medium.mb-4
+
+                +iconText({
+                  img: require('@img/check.svg'),
+                  text: 'Лечение бесплодия',
+                }).text-medium.mb-4
+
+                +iconText({
+                  img: require('@img/check.svg'),
+                  text: 'Лечение ожирения',
+                }).text-medium.mb-4
+
+                +iconText({
+                  img: require('@img/check.svg'),
+                  text: 'Ортопедия',
+                }).text-medium.mb-4
+
+          .col-xl-5
+            +block({
+              size: 'small',
+            })
+              .h4.mb-4 Не нашли нужного направления?
+
+              .row 
+                .col-xl-7
+                  | Свяжитесь с нами. Подберем вам клинику в течение
+                  strong 15 минут 
+
+                  +btn({
+                    name: 'Подобрать клинику',
+                    size: '',
+                    color: '',
+                    href: '#',
+                  }).w-100.mt-4
+
+                .col-xl-5.text-right 
+                  img(
+                    src= require('@img/image-15.webp')
+                    alt="image"
+                  )
+
+      +block({
+        color: 'blue',
+        size: 'big',
+      })
+        .h3.text-center.mb-5 Берем все заботы на себя — ничто не будет отвлекать вас от лечения
+
+        .row.justify-content-between
+          .col-xl-5 
+            .text-madium 
+              p 
+                | Стоимость лечения в Израиле 
+                span.color-orange на 30% ниже
+                | , чем в Германии и других странах Европы. Но не уступает по качеству
+              
+              p 
+                | От Москвы до Израиля — 
+                span.color-orange всего 4 часа на самолете
+
+              p 
+                span.color-orange Безвизовый режим 
+                | для российских и украинских граждан.
+                br 
+                | Вы можете приехать на лечение в Израиль даже в период пандемии коронавируса
+
+            +btn({
+              name: 'Узнать про правила въезда',
+              size: '',
+              color: '',
+              href: '#',
+            }).mt-4
+
+          .col-xl-5.text-right 
+            +imageBlock({
+              img: require('@img/image-16.jpg'),
+            })
+
+      +block({
+        color: 'blue',
+        size: 'big',
+      })
+        .h3.text-center.mb-5
+          | Всегда стараются использовать малоинвазивные процедуры, 
+          br 
+          | а не сложные рискованные операции
+
+        .row.justify-content-between
+          .col-xl-5 
+            .text-madium 
+              p 
+                | Клиники Израиля имеют
+                span.color-orange сертификат JCI
+                | . Он доказывает высокий профессионализм врачей, успешное внедрение передовых методик диагностики и лечения, наличие уникального оборудования высокой точности
+              
+              p 
+                | В клиниках Израиля 
+                span.color-orange самый высокий процент 
+                |пациентов, которые полностью вылечились от рака
+
+          .col-xl-5.text-right
+            +imageBlock({
+              img: require('@img/image-17.jpg'),
+            })
