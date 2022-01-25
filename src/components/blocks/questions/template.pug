@@ -1,3 +1,8 @@
+-
+  const itemsQuestions = {
+    tabsFormId: 2,
+  };
+
 section.questions
   .container
     .row.justify-content-end
@@ -16,16 +21,55 @@ section.questions
 
             .text-medium.mb-3 Куда прислать ответ?
 
+            +tabsForm({
+              tabsId: itemsQuestions.tabsFormId,
+              items: [
+                'SMS',
+                'WhatsApp',
+                'E-mail',
+              ],
+            }).text-medium
+
             +block({})
               .row 
                 .col-xl-6.mb-2
-                  +input({
-                    label: 'Введите телефон',
-                    name: 'phone',
-                    placeholder: '+7 (___) ___-__-__',
-                    type: 'tel',
-                    required: true,
-                  }).text-medium
+                  .tab-block(
+                    id= `tabs-block-${itemsQuestions.tabsFormId}-0`
+                    data-tabs-id= `${itemsQuestions.tabsFormId}`
+                  )
+                    +input({
+                      label: 'Введите телефон',
+                      name: 'phone',
+                      placeholder: '+7 (___) ___-__-__',
+                      type: 'tel',
+                      required: true,
+                    }).text-medium
+
+                  .tab-block.d-none(
+                    id= `tabs-block-${itemsQuestions.tabsFormId}-1`
+                    data-tabs-id= `${itemsQuestions.tabsFormId}`
+                  )
+                    +input({
+                      label: 'Введите телефон',
+                      name: 'whatsapp',
+                      placeholder: '+7 (___) ___-__-__',
+                      type: 'tel',
+                      required: true,
+                      disabled: true,
+                    }).text-medium
+
+                  .tab-block.d-none(
+                    id= `tabs-block-${itemsQuestions.tabsFormId}-2`
+                    data-tabs-id= `${itemsQuestions.tabsFormId}`
+                  )
+                    +input({
+                      label: 'Введите e-mail',
+                      name: 'whatsapp',
+                      placeholder: '___@__.__',
+                      type: 'email',
+                      required: true,
+                      disabled: true,
+                    }).text-medium
 
                 .col-xl-6.mb-2.align-self-end
                   +btn({

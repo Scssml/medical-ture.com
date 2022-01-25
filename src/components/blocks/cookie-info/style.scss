@@ -1,0 +1,24 @@
+.cookie-info {
+  position: fixed;
+  top: 100%;
+  right: 15px;
+  width: 420px;
+  z-index: 9999;
+  transition: transform .25s ease-in-out;
+
+  &__close {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 14px;
+    height: 14px;
+    background-image: url(@img/close.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  &--show {
+    transform: translateY(calc(-100% - 15px));
+  }
+}

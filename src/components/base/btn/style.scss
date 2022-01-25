@@ -65,7 +65,7 @@
 
   &--size {
 
-    &-small {
+    &-medium {
       height: 50px;
       font-size: 1rem;
       line-height: 1.27;
@@ -74,6 +74,18 @@
       .btn__icon {
         width: 16px;
         height: 16px;
+      }
+    }
+
+    &-small {
+      height: 40px;
+      font-size: 1rem;
+      line-height: 1.27;
+      padding: 7px 15px;
+
+      .btn__icon {
+        width: 14px;
+        height: 14px;
       }
     }
   }

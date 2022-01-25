@@ -1,0 +1,60 @@
+.tabs-form {
+  display: flex;
+  width: 100%;
+
+  &__item {
+    text-decoration: none;
+    position: relative;
+    background-color: var(--colorBgSecondary);
+    color: var(--colorTextSecondary);
+    padding: 10px 20px;
+    transition: background-color .25s ease-in-out,
+                color .25s ease-in-out;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background-color: var(--colorBgGrayLight);
+      opacity: .2;
+    }
+
+    &:first-child {
+      border-radius: 5px 0 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 5px 0 0;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &--active {
+      background-color: var(--colorBgGrayLight);
+      color: var(--colorTextPrimary);
+
+      &:hover,
+      &:focus {
+        color: var(--colorTextPrimary);
+      }
+
+      &:after {
+        top: initial;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: var(--colorBgGray);
+        opacity: 1;
+      }
+    }
+  }
+
+  & + .block {
+    border-top-left-radius: 0;
+  }
+}

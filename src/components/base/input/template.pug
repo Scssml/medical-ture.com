@@ -1,10 +1,12 @@
 -
   const defaultOptionsInput = {
     label: '',
+    description: '',
     name: '',
     placeholder: '',
     type: 'text',
     required: false,
+    disabled: false,
     light: false,
     error: 'Пожалуйста, заполните поле ввода',
   };
@@ -19,11 +21,15 @@ mixin input(options)
       = options.label
       br
 
+    if options.description
+      .input__description.mt-1= options.description
+
     input(
       type=options.type
       name=options.name
       placeholder=options.placeholder
-      required=options.required  
+      required=options.required
+      disabled=options.disabled
     ).mb-4
 
     .input__error-text= options.error

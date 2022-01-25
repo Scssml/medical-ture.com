@@ -1,0 +1,18 @@
+-
+  const defaultOptionsTabsForm = {
+    tabsId: '',
+    items: [],
+  };
+
+mixin tabsForm(options)
+  - options = Object.assign({}, defaultOptionsTabsForm, options);
+
+  .tabs-form&attributes(attributes)
+    each val, i in options.items
+      - const classCss = (!i) ? ' tabs-form__item--active' : '';
+
+      a.tabs-form__item(
+        class= classCss,
+        href= `#tabs-block-${options.tabsId}-${i}`,
+        data-tabs-id= `${options.tabsId}`
+      )= val

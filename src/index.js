@@ -33,8 +33,10 @@ import '@com/base/slider-1/script.js';
 import '@com/base/slider-2/script.js';
 import '@com/base/slider-3/script.js';
 import '@com/base/tabs/script.js';
+import '@com/base/tabs-form/script.js';
 
 import '@com/blocks/header/script.js';
+
 import '@com/blocks/utp/script.js';
 import '@com/blocks/advantages/script.js';
 import '@com/blocks/direction/script.js';
@@ -52,4 +54,7 @@ import '@com/blocks/about-country/script.js';
 import '@com/blocks/reviews/script.js';
 import '@com/blocks/tariff/script.js';
 import '@com/blocks/questions/script.js';
+
 import '@com/blocks/footer/script.js';
+
+import '@com/blocks/cookie-info/script.js';
