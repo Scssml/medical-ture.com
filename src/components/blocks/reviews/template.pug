@@ -61,6 +61,7 @@ section.m-5.py-5
 
         .col-xl-6.text-right
           img(
-            src= require('@img/image-18.webp'),
+            src= emptyImg,
+            data-src= require('@img/image-18.webp'),
             alt="image"
-          ).my-n1
+          ).lazyload.my-n1

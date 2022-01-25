@@ -9,6 +9,7 @@ mixin video(options)
 
   a.video(href= options.href)&attributes(attributes)
     img(
-      src= options.img,
+      src= emptyImg,
+      data-src= options.img,
       alt= "video"
-    )
+    ).lazyload

@@ -12,9 +12,10 @@
                 strong 15 минут
 
           img(
-            src= require('@img/image-14.webp'),
+            src= emptyImg,
+            data-src= require('@img/image-14.webp'),
             alt="image"
-          )
+          ).lazyload
 
       .col-xl-7
         include /blocks/feedback-form/template

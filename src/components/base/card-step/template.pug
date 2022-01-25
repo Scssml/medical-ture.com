@@ -14,8 +14,9 @@ mixin cardStep(options)
 
       .card-step__img
         img(
-          src= options.img,
+          src= emptyImg,
+          data-src= options.img,
           alt="icon"
-        )
+        ).lazyload
 
     .card-step__text!= options.text

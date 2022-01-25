@@ -14,6 +14,7 @@ mixin icon(options)
 
   .icon(class= classCss)&attributes(attributes)
     img(
-      src= options.img,
+      src= emptyImg,
+      data-src= options.img,
       alt="icon"
-    )
+    ).lazyload

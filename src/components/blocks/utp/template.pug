@@ -30,6 +30,7 @@ section.utp
     
   .utp__img
     img(
-      src= require('@img/image-5.jpg'),
+      src= emptyImg,
+      data-src= require('@img/image-5.jpg'),
       alt="utp"
-    )
+    ).lazyload

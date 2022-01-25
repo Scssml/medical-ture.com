@@ -13,9 +13,10 @@ section.my-5.py-5
 
       .col-xl-3.text-center
         img(
-          src= require('@img/image-8.jpg')
+          src= emptyImg,
+          data-src= require('@img/image-8.jpg'),
           alt="image"
-        ).mb-4
+        ).lazyload.mb-4
 
         .text-medium Лицензия
 

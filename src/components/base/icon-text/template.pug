@@ -10,9 +10,10 @@ mixin iconText(options)
   .icon-text&attributes(attributes)
     .icon-text__img
       img(
-        src= options.img,
+        src= emptyImg,
+        data-src= options.img,
         alt="icon"
-      )
+      ).lazyload
 
     if options.text
       span!= options.text

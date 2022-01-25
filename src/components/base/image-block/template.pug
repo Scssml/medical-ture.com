@@ -10,9 +10,10 @@ mixin imageBlock(options)
   .image-block&attributes(attributes)
     .image-block__img
       img(
-        src= options.img,
+        src= emptyImg,
+        data-src= options.img,
         alt="image"
-      )
+      ).lazyload
 
     if options.text
       .image-block__text= options.text

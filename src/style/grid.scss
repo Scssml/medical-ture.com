@@ -36,4 +36,9 @@
 
 img {
   max-width: 100%;
+  transition: opacity .25s ease-in-out;
+
+  &[src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"] {
+    opacity: 0;
+  }
 }

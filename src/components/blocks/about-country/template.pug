@@ -119,9 +119,10 @@ section.m-5.py-5
 
                 .col-xl-5.text-right 
                   img(
-                    src= require('@img/image-15.webp')
+                    src= emptyImg,
+                    data-src= require('@img/image-15.webp'),
                     alt="image"
-                  )
+                  ).lazyload
 
       +block({
         color: 'blue',

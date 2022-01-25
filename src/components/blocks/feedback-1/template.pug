@@ -23,9 +23,10 @@ section.my-5.py-5
 
             .col-xl-7
               img(
-                src= require('@img/quote.svg'),
+                src= emptyImg,
+                data-src= require('@img/quote.svg'),
                 alt="quote"
-              ).mb-4
+              ).lazyload.mb-4
 
               p.mb-2 Предложим 2-3 клиники с хорошими результатами лечения вашего заболевания
 

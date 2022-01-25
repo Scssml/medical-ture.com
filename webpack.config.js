@@ -101,7 +101,7 @@ module.exports = {
   target: isDev ? 'web' : 'browserslist',
   entry: {
     main: [
-      '@babel/polyfill',
+      // '@babel/polyfill',
       './index.js',
     ],
   },

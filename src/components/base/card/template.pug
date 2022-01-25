@@ -10,9 +10,10 @@ mixin card(options)
   .card&attributes(attributes)
     .card__img
       img(
-        src= options.img,
+        src= emptyImg,
+        data-src= options.img,
         alt="card"
-      )
+      ).lazyload
 
     .card__content
       .card__name.h6.mb-4= options.name

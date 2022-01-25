@@ -35,4 +35,8 @@ mixin btn(options)
 
       if options.icon
         span.btn__icon
-          img(src= options.icon alt="icon")
+          img(
+            src= emptyImg,
+            data-src= options.icon,
+            alt="icon"
+          ).lazyload

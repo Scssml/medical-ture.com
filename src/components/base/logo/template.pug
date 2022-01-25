@@ -17,8 +17,9 @@ mixin logo(options)
   )&attributes(attributes)
     .logo__img
       img(
-        src= options.img,
+        src= emptyImg,
+        data-src= options.img,
         alt="logo"
-      )
+      ).lazyload
 
     != options.text

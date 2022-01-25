@@ -88,6 +88,7 @@ section.questions
     
   .questions__img
     img(
-      src= require('@img/image-19.jpg'),
+      src= emptyImg,
+      data-src= require('@img/image-19.jpg'),
       alt="questions"
-    )
+    ).lazyload
